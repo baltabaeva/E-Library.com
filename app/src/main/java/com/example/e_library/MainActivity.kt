@@ -2,11 +2,11 @@ package com.example.e_library
 
 import android.os.Bundle
 import android.view.Menu
-<<<<<<< HEAD
-import android.widget.SearchView
-=======
-import android.widget.Spinner
->>>>>>> origin/main
+//<<<<<<< HEAD
+//import android.widget.SearchView
+//=======
+//import android.widget.Spinner
+//>>>>>>> origin/main
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
