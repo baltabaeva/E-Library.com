@@ -57,6 +57,14 @@
 <!--        app:layout_constraintStart_toStartOf = "parent"-->
 <!--        app:layout_constraintTop_toTopOf = "parent">-->
 <!--    </androidx.recyclerview.widget.RecyclerView>-->
+<!--    <ScrollView-->
+<!--        android:id="@+id/SCROLLER_ID"-->
+<!--        android:layout_width="fill_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:scrollbars="vertical"-->
+<!--        android:fillViewport="true"-->
+<!--        android:layout_marginTop="300dp"-->
+<!--        tools:ignore="MissingConstraints">-->
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -98,7 +106,40 @@
                             android:layout_marginRight="25dp"
 
                             android:src="@drawable/img1" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="23dp"
+                                android:layout_height="35dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="30dp"
+                                app:srcCompat="@drawable/star_icon"
+                                android:gravity="center_horizontal"/>
 
+                            <TextView
+                                android:layout_width="41dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="10dp"
+                                android:text="4.8"
+                                android:textSize="16sp" />
+
+                            <Button
+                                android:layout_width="70dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="sans-serif-black"
+                                android:gravity="center_horizontal"
+                                android:text="Read"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                app:cornerRadius="8dp" />
+
+
+                        </LinearLayout>
 <!--                        <fragment-->
 <!--                            android:id="@+id/nav_host_fragment_content_main"-->
 <!--                            android:name="androidx.navigation.fragment.NavHostFragment"-->
@@ -129,6 +170,40 @@
                             android:layout_marginTop="15dp"
                             android:layout_marginRight="25dp"
                             android:src="@drawable/img2" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="23dp"
+                                android:layout_height="35dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="30dp"
+                                app:srcCompat="@drawable/star_icon"
+                                android:gravity="center_horizontal"/>
+
+                            <TextView
+                                android:layout_width="41dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="10dp"
+                                android:text="4.8"
+                                android:textSize="16sp" />
+
+                            <Button
+                                android:layout_width="70dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="sans-serif-black"
+                                android:gravity="center_horizontal"
+                                android:text="Read"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                app:cornerRadius="8dp" />
+
+
+                        </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -151,6 +226,40 @@
                             android:layout_marginTop="15dp"
                             android:layout_marginRight="25dp"
                             android:src="@drawable/img3" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="23dp"
+                                android:layout_height="35dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="30dp"
+                                app:srcCompat="@drawable/star_icon"
+                                android:gravity="center_horizontal"/>
+
+                            <TextView
+                                android:layout_width="41dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="10dp"
+                                android:text="4.8"
+                                android:textSize="16sp" />
+
+                            <Button
+                                android:layout_width="70dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="sans-serif-black"
+                                android:gravity="center_horizontal"
+                                android:text="Read"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                app:cornerRadius="8dp" />
+
+
+                        </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -173,6 +282,40 @@
                             android:layout_marginTop="15dp"
                             android:layout_marginRight="25dp"
                             android:src="@drawable/img4" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="23dp"
+                                android:layout_height="35dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="30dp"
+                                app:srcCompat="@drawable/star_icon"
+                                android:gravity="center_horizontal"/>
+
+                            <TextView
+                                android:layout_width="41dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="10dp"
+                                android:text="4.8"
+                                android:textSize="16sp" />
+
+                            <Button
+                                android:layout_width="70dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="sans-serif-black"
+                                android:gravity="center_horizontal"
+                                android:text="Read"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                app:cornerRadius="8dp" />
+
+
+                        </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -195,6 +338,40 @@
                             android:layout_marginTop="15dp"
                             android:layout_marginRight="25dp"
                             android:src="@drawable/img5" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="23dp"
+                                android:layout_height="35dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="30dp"
+                                app:srcCompat="@drawable/star_icon"
+                                android:gravity="center_horizontal"/>
+
+                            <TextView
+                                android:layout_width="41dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="10dp"
+                                android:text="4.8"
+                                android:textSize="16sp" />
+
+                            <Button
+                                android:layout_width="70dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="sans-serif-black"
+                                android:gravity="center_horizontal"
+                                android:text="Read"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                app:cornerRadius="8dp" />
+
+
+                        </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -217,6 +394,40 @@
                             android:layout_marginTop="15dp"
                             android:layout_marginRight="25dp"
                             android:src="@drawable/img6" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="23dp"
+                                android:layout_height="35dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="30dp"
+                                app:srcCompat="@drawable/star_icon"
+                                android:gravity="center_horizontal"/>
+
+                            <TextView
+                                android:layout_width="41dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="10dp"
+                                android:text="4.8"
+                                android:textSize="16sp" />
+
+                            <Button
+                                android:layout_width="70dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="sans-serif-black"
+                                android:gravity="center_horizontal"
+                                android:text="Read"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                app:cornerRadius="8dp" />
+
+
+                        </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -239,6 +450,40 @@
                             android:layout_marginTop="15dp"
                             android:layout_marginRight="25dp"
                             android:src="@drawable/img7" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="23dp"
+                                android:layout_height="35dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="30dp"
+                                app:srcCompat="@drawable/star_icon"
+                                android:gravity="center_horizontal"/>
+
+                            <TextView
+                                android:layout_width="41dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="10dp"
+                                android:text="4.8"
+                                android:textSize="16sp" />
+
+                            <Button
+                                android:layout_width="70dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="sans-serif-black"
+                                android:gravity="center_horizontal"
+                                android:text="Read"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                app:cornerRadius="8dp" />
+
+
+                        </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -246,7 +491,13 @@
             </LinearLayout>
 
         </HorizontalScrollView>
-
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:text="Popular books  >"
+    android:layout_marginLeft="30dp"
+    android:textColor="@color/black"
+    android:padding="10dp"/>
         <HorizontalScrollView
             android:id="@+id/horizontalScrollView"
             android:layout_width="match_parent"
@@ -278,6 +529,40 @@
                             android:layout_marginRight="25dp"
 
                             android:src="@drawable/img1" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="23dp"
+                                android:layout_height="35dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="30dp"
+                                app:srcCompat="@drawable/star_icon"
+                                android:gravity="center_horizontal"/>
+
+                            <TextView
+                                android:layout_width="41dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="10dp"
+                                android:text="4.8"
+                                android:textSize="16sp" />
+
+                            <Button
+                                android:layout_width="70dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="sans-serif-black"
+                                android:gravity="center_horizontal"
+                                android:text="Read"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                app:cornerRadius="8dp" />
+
+
+                        </LinearLayout>
 
                         <fragment
                             android:id="@+id/nav_host_fragment_content_main"
@@ -309,6 +594,40 @@
                             android:layout_marginTop="15dp"
                             android:layout_marginRight="25dp"
                             android:src="@drawable/img2" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="23dp"
+                                android:layout_height="35dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="30dp"
+                                app:srcCompat="@drawable/star_icon"
+                                android:gravity="center_horizontal"/>
+
+                            <TextView
+                                android:layout_width="41dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="10dp"
+                                android:text="4.8"
+                                android:textSize="16sp" />
+
+                            <Button
+                                android:layout_width="70dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="sans-serif-black"
+                                android:gravity="center_horizontal"
+                                android:text="Read"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                app:cornerRadius="8dp" />
+
+
+                        </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -331,6 +650,40 @@
                             android:layout_marginTop="15dp"
                             android:layout_marginRight="25dp"
                             android:src="@drawable/img3" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="23dp"
+                                android:layout_height="35dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="30dp"
+                                app:srcCompat="@drawable/star_icon"
+                                android:gravity="center_horizontal"/>
+
+                            <TextView
+                                android:layout_width="41dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="10dp"
+                                android:text="4.8"
+                                android:textSize="16sp" />
+
+                            <Button
+                                android:layout_width="70dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="sans-serif-black"
+                                android:gravity="center_horizontal"
+                                android:text="Read"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                app:cornerRadius="8dp" />
+
+
+                        </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -353,6 +706,40 @@
                             android:layout_marginTop="15dp"
                             android:layout_marginRight="25dp"
                             android:src="@drawable/img4" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="23dp"
+                                android:layout_height="35dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="30dp"
+                                app:srcCompat="@drawable/star_icon"
+                                android:gravity="center_horizontal"/>
+
+                            <TextView
+                                android:layout_width="41dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="10dp"
+                                android:text="4.8"
+                                android:textSize="16sp" />
+
+                            <Button
+                                android:layout_width="70dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="sans-serif-black"
+                                android:gravity="center_horizontal"
+                                android:text="Read"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                app:cornerRadius="8dp" />
+
+
+                        </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -375,6 +762,40 @@
                             android:layout_marginTop="15dp"
                             android:layout_marginRight="25dp"
                             android:src="@drawable/img5" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="23dp"
+                                android:layout_height="35dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="30dp"
+                                app:srcCompat="@drawable/star_icon"
+                                android:gravity="center_horizontal"/>
+
+                            <TextView
+                                android:layout_width="41dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="10dp"
+                                android:text="4.8"
+                                android:textSize="16sp" />
+
+                            <Button
+                                android:layout_width="70dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="sans-serif-black"
+                                android:gravity="center_horizontal"
+                                android:text="Read"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                app:cornerRadius="8dp" />
+
+
+                        </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -397,6 +818,40 @@
                             android:layout_marginTop="15dp"
                             android:layout_marginRight="25dp"
                             android:src="@drawable/img6" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="23dp"
+                                android:layout_height="35dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="30dp"
+                                app:srcCompat="@drawable/star_icon"
+                                android:gravity="center_horizontal"/>
+
+                            <TextView
+                                android:layout_width="41dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="10dp"
+                                android:text="4.8"
+                                android:textSize="16sp" />
+
+                            <Button
+                                android:layout_width="70dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="sans-serif-black"
+                                android:gravity="center_horizontal"
+                                android:text="Read"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                app:cornerRadius="8dp" />
+
+
+                        </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -419,6 +874,40 @@
                             android:layout_marginTop="15dp"
                             android:layout_marginRight="25dp"
                             android:src="@drawable/img7" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="23dp"
+                                android:layout_height="35dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="30dp"
+                                app:srcCompat="@drawable/star_icon"
+                                android:gravity="center_horizontal"/>
+
+                            <TextView
+                                android:layout_width="41dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="10dp"
+                                android:text="4.8"
+                                android:textSize="16sp" />
+
+                            <Button
+                                android:layout_width="70dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="sans-serif-black"
+                                android:gravity="center_horizontal"
+                                android:text="Read"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                app:cornerRadius="8dp" />
+
+
+                        </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -437,6 +926,7 @@
 
 
     </LinearLayout>
+<!--    </ScrollView>-->
 
     <TextView
         android:id="@+id/textView2"
