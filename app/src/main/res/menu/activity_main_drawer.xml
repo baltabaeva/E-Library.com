@@ -4,18 +4,45 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:showIn="navigation_view">
 
+
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_menu_houses"
             android:title="@string/menu_home" />
+    </group>
+<group>
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_genres"
             android:icon="@drawable/ic_menu_house_foreground"
-            android:title="Genres" />
+            android:title="Genres">
 
+            <menu>
+                <item
+                    android:id="@+id/fantasy"
+                    android:title="Fantasy" />
+                <item
+                    android:id="@+id/adventure"
+                    android:title="Adventure" />
+                <item
+                    android:id="@+id/romance"
+                    android:title="Romance" />
+                <item
+                    android:id="@+id/horror"
+                    android:title="Horror" />
+                <item
+                    android:id="@+id/scienceFiction"
+                    android:title="Science Fiction" />
+                <item
+                    android:id="@+id/childrens"
+                    android:title="Childrens" />
+
+            </menu>
+        </item>
+</group>
+    <group>
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_account"
             android:icon="@drawable/ic_menu_accounts"
             android:title="My account" />
     </group>

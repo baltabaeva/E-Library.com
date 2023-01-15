@@ -19,4 +19,8 @@
     <string name="str5">name</string>
     <string name="str6">name</string>
     <string name="str7">name</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+
 </resources>

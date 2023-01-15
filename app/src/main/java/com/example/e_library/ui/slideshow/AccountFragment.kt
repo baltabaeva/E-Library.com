@@ -1,17 +1,16 @@
-package com.example.e_library.ui.home
+package com.example.e_library.ui.slideshow
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.e_library.databinding.FragmentHomeBinding
+import com.example.e_library.databinding.FragmentGenresBinding
 
-class HomeFragment : Fragment() {
+class AccountFragment : Fragment() {
 
-    private var _binding: FragmentHomeBinding? = null
+    private var _binding: FragmentGenresBinding? = null
 
     private val binding get() = _binding!!
 
@@ -20,10 +19,10 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
+        val slideshowViewModel =
+            ViewModelProvider(this).get(AccountViewModel::class.java)
 
-        _binding = FragmentHomeBinding.inflate(layoutInflater, container, false)
+        _binding = FragmentGenresBinding.inflate(layoutInflater, container, false)
 
         return binding.root
     }

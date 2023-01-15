@@ -47,24 +47,10 @@
         <!--            tools:ignore="MissingConstraints" />-->
 
     </com.google.android.material.card.MaterialCardView>
-<!--    <androidx.recyclerview.widget.RecyclerView-->
 
-<!--        android:id="@+id/recyclerView"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="0dp"-->
-<!--        app:layout_constraintEnd_toEndOf = "parent"-->
-<!--        app:layout_constraintHorizontal_bias = "0.5"-->
-<!--        app:layout_constraintStart_toStartOf = "parent"-->
-<!--        app:layout_constraintTop_toTopOf = "parent">-->
-<!--    </androidx.recyclerview.widget.RecyclerView>-->
-<!--    <ScrollView-->
-<!--        android:id="@+id/SCROLLER_ID"-->
-<!--        android:layout_width="fill_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:scrollbars="vertical"-->
-<!--        android:fillViewport="true"-->
-<!--        android:layout_marginTop="300dp"-->
-<!--        tools:ignore="MissingConstraints">-->
+
+
+
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -564,13 +550,7 @@
 
                         </LinearLayout>
 
-                        <fragment
-                            android:id="@+id/nav_host_fragment_content_main"
-                            android:name="androidx.navigation.fragment.NavHostFragment"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            app:defaultNavHost="true"
-                            app:navGraph="@navigation/mobile_navigation" />
+
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -926,7 +906,6 @@
 
 
     </LinearLayout>
-<!--    </ScrollView>-->
 
     <TextView
         android:id="@+id/textView2"
