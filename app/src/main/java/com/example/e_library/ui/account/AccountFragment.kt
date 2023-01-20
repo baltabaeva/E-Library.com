@@ -1,4 +1,4 @@
-package com.example.e_library.ui.gallery
+package com.example.e_library.ui.account
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,15 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.e_library.databinding.FragmentAccountBinding
+import com.example.e_library.databinding.FragmentGenresBinding
 
+class AccountFragment : Fragment() {
 
-class GenresFragment : Fragment() {
+    private var _binding: FragmentGenresBinding? = null
 
-    private var _binding: FragmentAccountBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -22,10 +19,10 @@ class GenresFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val galleryViewModel =
-            ViewModelProvider(this).get(GenresViewModel::class.java)
+        val slideshowViewModel =
+            ViewModelProvider(this).get(AccountViewModel::class.java)
 
-        _binding = FragmentAccountBinding.inflate(layoutInflater, container, false)
+        _binding = FragmentGenresBinding.inflate(layoutInflater, container, false)
 
         return binding.root
     }
