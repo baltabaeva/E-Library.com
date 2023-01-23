@@ -23,6 +23,37 @@
     <string name="close">Close</string>
     <string name="log_in">Log In</string>
     <string name="sign_up">Sig In <Up></Up></string>
+    <string name="list_fragment_label">Sports</string>
+    <string name="news_fragment_label">Sports News</string>
+
+    <string name="annotation_title">Title</string>
+    <string name="ant">Annotation</string>
+    <string name="sports_info_placeholder">Here is some news</string>
+    <string name="annotation_text">An annotation is extra information associated with a particular point in a document or other piece of information. It can be a note that includes a comment or explanation.[1] Annotations are sometimes presented in the margin of book pages. For annotations of different digital media, see web annotation and text annotation.
+
+</string>
+    />
+
+    <string name="book1">The Theory of Everything</string>
+    <string name="book2">Nightwork</string>
+    <string name="book3">Thus Spake </string>
+    <string name="book4">The Picture of Dorian Gray</string>
+    <string name="book5">East of Eden</string>
+    <string name="book6">Arch of Triumph</string>
+    <string name="book7">The Little Lady of Big House</string>
+
+    <string name="baseball_subtitle">Here is some Baseball news!</string>
+    <string name="badminton_subtitle">Here is some Badminton news!</string>
+    <string name="basketball_subtitle">Here is some Basketball news!</string>
+    <string name="bowling_subtitle">Here is some Bowling news!</string>
+    <string name="cycling_subtitle">Here is some Cycling news!</string>
+    <string name="golf_subtitle">Here is some Golf news!</string>
+    <string name="running_subtitle">Here is some Running news!</string>
+    <string name="soccer_subtitle">Here is some Soccer news!</string>
+    <string name="swimming_subtitle">Here is some Swimming news!</string>
+    <string name="table_tennis_subtitle">Here is some Table Tennis news!</string>
+    <string name="tennis_subtitle">Here is some Tennis news!</string>
+
 
 
 </resources>

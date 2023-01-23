@@ -3,16 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
-
+    app:startDestination="@+id/Recommendation">
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.example.e_library.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" >
-<!--        <action-->
-<!--            android:id="@+id/action_nav_home_self"-->
-<!--            app:destination="@id/nav_home" />-->
+        android:id="@+id/Recommendation"
+        android:name="com.example.e_library.BooksListFragment"
+        android:label="@string/rec"
+        tools:layout="@layout/recommendations">
+
+        <action
+            android:id="@+id/action_Recommendation_to_Annotation"
+            app:destination="@id/Annotation" />
+    </fragment>
+    <fragment
+        android:id="@+id/Annotation"
+        android:name="com.example.e_library.AnnotationFragment"
+        android:label="@string/annotation_title"
+        tools:layout="@layout/annotation">
+
+        <action
+            android:id="@+id/action_Annotation_to_Recommendation"
+            app:destination="@id/Recommendation" />
     </fragment>
 
     <fragment
