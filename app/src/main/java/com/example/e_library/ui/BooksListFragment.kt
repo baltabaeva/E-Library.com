@@ -13,7 +13,7 @@ import com.example.e_library.model.Books
 
 class BooksListFragment : Fragment() {
 
-    private val sportsViewModel: BooksViewModel by activityViewModels()
+    private val booksViewModel: LibraryViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,22 +30,19 @@ class BooksListFragment : Fragment() {
         // Connect the SlidingPaneLayout to the system back button.
         requireActivity().onBackPressedDispatcher.addCallback(
             viewLifecycleOwner,
-            SportsListOnBackPressedCallback(slidingPaneLayout)
+            BooksListOnBackPressedCallback(slidingPaneLayout)
         )
 
         // Initialize the adapter and set it to the RecyclerView.
         val adapter = BooksAdapter {
-            // Update the user selected sport as the current sport in the shared viewmodel
-            // This will automatically update the dual pane content
-            sportsViewModel.updateCurrentSport(it)
-            // Slide the detail pane into view. If both panes are visible,
-            // this has no visible effect.
+
+            booksViewModel.updateCurrentBook(it)
             binding.slidingPaneLayout.openPane()
         }
         binding.recyclerView.adapter = adapter
-        adapter.submitList(sportsViewModel.sportsData as List<Books>?)
+        adapter.submitList(booksViewModel.booksData as List<Books>?)
         binding.recyclerView2.adapter = adapter
-        adapter.submitList(sportsViewModel.sportsData as List<Books>?)
+        adapter.submitList(booksViewModel.booksData as List<Books>?)
     }
 }
 
@@ -53,7 +50,7 @@ class BooksListFragment : Fragment() {
  * Callback providing custom back navigation.
  */
 
-class SportsListOnBackPressedCallback(
+class BooksListOnBackPressedCallback(
     private val slidingPaneLayout: SlidingPaneLayout
 ) : OnBackPressedCallback(
     // Set the default 'enabled' state to true only if it is slidable (i.e., the panes

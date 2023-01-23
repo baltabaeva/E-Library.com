@@ -11,7 +11,7 @@ import com.example.e_library.databinding.AnnotationBinding
 
 class AnnotationFragment : Fragment() {
 
-    private val sportsViewModel: BooksViewModel by activityViewModels()
+    private val booksViewModel: LibraryViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -24,12 +24,10 @@ class AnnotationFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val binding = AnnotationBinding.bind(view)
 
-        // Attach an observer on the currentSport to update the UI automatically when the data
-        // changes.
-        sportsViewModel.currentSport.observe(this.viewLifecycleOwner) {
+        booksViewModel.currentBook.observe(this.viewLifecycleOwner) {
             binding.titleDetail.text = getString(it.titleResourceId)
-            binding.sportsImageDetail.load(it.sportsImageBanner)
-            binding.newsDetail.text = getString(it.newsDetails)
+            binding.booksImageDetail.load(it.booksImageBanner)
+            binding.newsDetail.text = getString(it.annotationDetails)
         }
     }
 }

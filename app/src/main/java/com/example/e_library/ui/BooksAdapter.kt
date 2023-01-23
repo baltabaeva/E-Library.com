@@ -11,17 +11,16 @@ import com.example.e_library.databinding.BooksListBinding
 import com.example.e_library.model.Books
 
 class BooksAdapter (private val onItemClicked: (Books) -> Unit) :
-    ListAdapter<Books, BooksAdapter.SportsViewHolder>(DiffCallback) {
+    ListAdapter<Books, BooksAdapter.BooksViewHolder>(DiffCallback) {
 
     private lateinit var context: Context
 
-    class SportsViewHolder(private var binding: BooksListBinding) :
+    class BooksViewHolder(private var binding: BooksListBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(sport: Books, context: Context) {
-            binding.sportsImage.load(sport.imageResourceId)
-            binding.title.text = context.getString(sport.titleResourceId)
-            // Load the images into the ImageView using the Coil library.
+        fun bind(book: Books, context: Context) {
+            binding.booksImage.load(book.imageResourceId)
+            binding.title.text = context.getString(book.titleResourceId)
 
         }
     }
@@ -29,16 +28,16 @@ class BooksAdapter (private val onItemClicked: (Books) -> Unit) :
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): SportsViewHolder {
+    ): BooksViewHolder {
         context = parent.context
-        return SportsViewHolder(
+        return BooksViewHolder(
             BooksListBinding.inflate(
                 LayoutInflater.from(parent.context), parent, false
             )
         )
     }
 
-    override fun onBindViewHolder(holder: SportsViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: BooksViewHolder, position: Int) {
         val current = getItem(position)
         holder.itemView.setOnClickListener {
             onItemClicked(current)
