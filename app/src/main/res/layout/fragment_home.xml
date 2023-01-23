@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -35,26 +36,40 @@
                 android:minHeight="?attr/actionBarSize"
                 android:theme="?attr/actionBarTheme" />
         </androidx.appcompat.widget.SearchView>
-        <!--        <TextView-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:text="@string/rec"-->
-        <!--            tools:layout_editor_absoluteX="5dp"-->
-        <!--            tools:layout_editor_absoluteY="110dp"-->
-        <!--            android:layout_margin="25dp"-->
-        <!--            android:textSize="15sp"-->
-        <!--            tools:ignore="MissingConstraints" />-->
+
 
     </com.google.android.material.card.MaterialCardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_marginTop="60dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialCardView"
         tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:padding="10dp"
+            android:layout_marginTop="25dp"
+            android:text="Recommendations for you  >"
+            android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
 
         <HorizontalScrollView
             android:layout_width="match_parent"
@@ -86,17 +101,19 @@
                             android:layout_marginRight="25dp"
 
                             android:src="@drawable/img1" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
                             <ImageView
                                 android:layout_width="23dp"
                                 android:layout_height="35dp"
-                                android:layout_marginTop="10dp"
                                 android:layout_marginLeft="30dp"
-                                app:srcCompat="@drawable/star_icon"
-                                android:gravity="center_horizontal"/>
+                                android:layout_marginTop="10dp"
+                                android:gravity="center_horizontal"
+                                app:srcCompat="@drawable/star_icon" />
 
                             <TextView
                                 android:layout_width="41dp"
@@ -120,14 +137,6 @@
 
 
                         </LinearLayout>
-                        <!--                        <fragment-->
-                        <!--                            android:id="@+id/nav_host_fragment_content_main"-->
-                        <!--                            android:name="androidx.navigation.fragment.NavHostFragment"-->
-                        <!--                            android:layout_width="match_parent"-->
-                        <!--                            android:layout_height="match_parent"-->
-                        <!--                            app:defaultNavHost="true"-->
-                        <!--                            app:navGraph="@navigation/mobile_navigation" />-->
-
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -150,17 +159,19 @@
                             android:layout_marginTop="15dp"
                             android:layout_marginRight="25dp"
                             android:src="@drawable/img2" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
                             <ImageView
                                 android:layout_width="23dp"
                                 android:layout_height="35dp"
-                                android:layout_marginTop="10dp"
                                 android:layout_marginLeft="30dp"
-                                app:srcCompat="@drawable/star_icon"
-                                android:gravity="center_horizontal"/>
+                                android:layout_marginTop="10dp"
+                                android:gravity="center_horizontal"
+                                app:srcCompat="@drawable/star_icon" />
 
                             <TextView
                                 android:layout_width="41dp"
@@ -206,17 +217,19 @@
                             android:layout_marginTop="15dp"
                             android:layout_marginRight="25dp"
                             android:src="@drawable/img3" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
                             <ImageView
                                 android:layout_width="23dp"
                                 android:layout_height="35dp"
-                                android:layout_marginTop="10dp"
                                 android:layout_marginLeft="30dp"
-                                app:srcCompat="@drawable/star_icon"
-                                android:gravity="center_horizontal"/>
+                                android:layout_marginTop="10dp"
+                                android:gravity="center_horizontal"
+                                app:srcCompat="@drawable/star_icon" />
 
                             <TextView
                                 android:layout_width="41dp"
@@ -262,17 +275,19 @@
                             android:layout_marginTop="15dp"
                             android:layout_marginRight="25dp"
                             android:src="@drawable/img4" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
                             <ImageView
                                 android:layout_width="23dp"
                                 android:layout_height="35dp"
-                                android:layout_marginTop="10dp"
                                 android:layout_marginLeft="30dp"
-                                app:srcCompat="@drawable/star_icon"
-                                android:gravity="center_horizontal"/>
+                                android:layout_marginTop="10dp"
+                                android:gravity="center_horizontal"
+                                app:srcCompat="@drawable/star_icon" />
 
                             <TextView
                                 android:layout_width="41dp"
@@ -318,17 +333,19 @@
                             android:layout_marginTop="15dp"
                             android:layout_marginRight="25dp"
                             android:src="@drawable/img5" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
                             <ImageView
                                 android:layout_width="23dp"
                                 android:layout_height="35dp"
-                                android:layout_marginTop="10dp"
                                 android:layout_marginLeft="30dp"
-                                app:srcCompat="@drawable/star_icon"
-                                android:gravity="center_horizontal"/>
+                                android:layout_marginTop="10dp"
+                                android:gravity="center_horizontal"
+                                app:srcCompat="@drawable/star_icon" />
 
                             <TextView
                                 android:layout_width="41dp"
@@ -374,17 +391,19 @@
                             android:layout_marginTop="15dp"
                             android:layout_marginRight="25dp"
                             android:src="@drawable/img6" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
                             <ImageView
                                 android:layout_width="23dp"
                                 android:layout_height="35dp"
-                                android:layout_marginTop="10dp"
                                 android:layout_marginLeft="30dp"
-                                app:srcCompat="@drawable/star_icon"
-                                android:gravity="center_horizontal"/>
+                                android:layout_marginTop="10dp"
+                                android:gravity="center_horizontal"
+                                app:srcCompat="@drawable/star_icon" />
 
                             <TextView
                                 android:layout_width="41dp"
@@ -430,17 +449,19 @@
                             android:layout_marginTop="15dp"
                             android:layout_marginRight="25dp"
                             android:src="@drawable/img7" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
                             <ImageView
                                 android:layout_width="23dp"
                                 android:layout_height="35dp"
-                                android:layout_marginTop="10dp"
                                 android:layout_marginLeft="30dp"
-                                app:srcCompat="@drawable/star_icon"
-                                android:gravity="center_horizontal"/>
+                                android:layout_marginTop="10dp"
+                                android:gravity="center_horizontal"
+                                app:srcCompat="@drawable/star_icon" />
 
                             <TextView
                                 android:layout_width="41dp"
@@ -471,13 +492,15 @@
             </LinearLayout>
 
         </HorizontalScrollView>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Popular books  >"
             android:layout_marginLeft="30dp"
-            android:textColor="@color/black"
-            android:padding="10dp"/>
+            android:padding="10dp"
+            android:text="Popular books  >"
+            android:textColor="@color/black" />
+
         <HorizontalScrollView
             android:id="@+id/horizontalScrollView"
             android:layout_width="match_parent"
@@ -509,17 +532,19 @@
                             android:layout_marginRight="25dp"
 
                             android:src="@drawable/img1" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
                             <ImageView
                                 android:layout_width="23dp"
                                 android:layout_height="35dp"
-                                android:layout_marginTop="10dp"
                                 android:layout_marginLeft="30dp"
-                                app:srcCompat="@drawable/star_icon"
-                                android:gravity="center_horizontal"/>
+                                android:layout_marginTop="10dp"
+                                android:gravity="center_horizontal"
+                                app:srcCompat="@drawable/star_icon" />
 
                             <TextView
                                 android:layout_width="41dp"
@@ -545,7 +570,6 @@
                         </LinearLayout>
 
 
-
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -568,17 +592,19 @@
                             android:layout_marginTop="15dp"
                             android:layout_marginRight="25dp"
                             android:src="@drawable/img2" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
                             <ImageView
                                 android:layout_width="23dp"
                                 android:layout_height="35dp"
-                                android:layout_marginTop="10dp"
                                 android:layout_marginLeft="30dp"
-                                app:srcCompat="@drawable/star_icon"
-                                android:gravity="center_horizontal"/>
+                                android:layout_marginTop="10dp"
+                                android:gravity="center_horizontal"
+                                app:srcCompat="@drawable/star_icon" />
 
                             <TextView
                                 android:layout_width="41dp"
@@ -624,17 +650,19 @@
                             android:layout_marginTop="15dp"
                             android:layout_marginRight="25dp"
                             android:src="@drawable/img3" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
                             <ImageView
                                 android:layout_width="23dp"
                                 android:layout_height="35dp"
-                                android:layout_marginTop="10dp"
                                 android:layout_marginLeft="30dp"
-                                app:srcCompat="@drawable/star_icon"
-                                android:gravity="center_horizontal"/>
+                                android:layout_marginTop="10dp"
+                                android:gravity="center_horizontal"
+                                app:srcCompat="@drawable/star_icon" />
 
                             <TextView
                                 android:layout_width="41dp"
@@ -680,17 +708,19 @@
                             android:layout_marginTop="15dp"
                             android:layout_marginRight="25dp"
                             android:src="@drawable/img4" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
                             <ImageView
                                 android:layout_width="23dp"
                                 android:layout_height="35dp"
-                                android:layout_marginTop="10dp"
                                 android:layout_marginLeft="30dp"
-                                app:srcCompat="@drawable/star_icon"
-                                android:gravity="center_horizontal"/>
+                                android:layout_marginTop="10dp"
+                                android:gravity="center_horizontal"
+                                app:srcCompat="@drawable/star_icon" />
 
                             <TextView
                                 android:layout_width="41dp"
@@ -736,17 +766,19 @@
                             android:layout_marginTop="15dp"
                             android:layout_marginRight="25dp"
                             android:src="@drawable/img5" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
                             <ImageView
                                 android:layout_width="23dp"
                                 android:layout_height="35dp"
-                                android:layout_marginTop="10dp"
                                 android:layout_marginLeft="30dp"
-                                app:srcCompat="@drawable/star_icon"
-                                android:gravity="center_horizontal"/>
+                                android:layout_marginTop="10dp"
+                                android:gravity="center_horizontal"
+                                app:srcCompat="@drawable/star_icon" />
 
                             <TextView
                                 android:layout_width="41dp"
@@ -792,17 +824,19 @@
                             android:layout_marginTop="15dp"
                             android:layout_marginRight="25dp"
                             android:src="@drawable/img6" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
                             <ImageView
                                 android:layout_width="23dp"
                                 android:layout_height="35dp"
-                                android:layout_marginTop="10dp"
                                 android:layout_marginLeft="30dp"
-                                app:srcCompat="@drawable/star_icon"
-                                android:gravity="center_horizontal"/>
+                                android:layout_marginTop="10dp"
+                                android:gravity="center_horizontal"
+                                app:srcCompat="@drawable/star_icon" />
 
                             <TextView
                                 android:layout_width="41dp"
@@ -848,17 +882,19 @@
                             android:layout_marginTop="15dp"
                             android:layout_marginRight="25dp"
                             android:src="@drawable/img7" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
                             <ImageView
                                 android:layout_width="23dp"
                                 android:layout_height="35dp"
-                                android:layout_marginTop="10dp"
                                 android:layout_marginLeft="30dp"
-                                app:srcCompat="@drawable/star_icon"
-                                android:gravity="center_horizontal"/>
+                                android:layout_marginTop="10dp"
+                                android:gravity="center_horizontal"
+                                app:srcCompat="@drawable/star_icon" />
 
                             <TextView
                                 android:layout_width="41dp"
@@ -897,20 +933,18 @@
             android:text="@string/pop"
             app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
             tools:layout_editor_absoluteY="547dp" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rec"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintStart_toStartOf="@+id/materialCardView"
+            app:layout_constraintTop_toBottomOf="@+id/materialCardView"
+            app:layout_constraintVertical_bias="0.483" />
 
 
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/rec"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintStart_toStartOf="@+id/materialCardView"
-        app:layout_constraintTop_toBottomOf="@+id/materialCardView"
-        app:layout_constraintVertical_bias="0.483" />
-
-
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

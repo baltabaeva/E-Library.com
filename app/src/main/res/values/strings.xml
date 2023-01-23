@@ -21,6 +21,8 @@
     <string name="str7">name</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
+    <string name="log_in">Log In</string>
+    <string name="sign_up">Sig In <Up></Up></string>
 
 
 </resources>
