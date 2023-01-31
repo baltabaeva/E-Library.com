@@ -19,6 +19,7 @@ class BooksListFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         return RecommendationsBinding.inflate(inflater, container, false).root
     }
 
@@ -27,13 +28,12 @@ class BooksListFragment : Fragment() {
         val binding = RecommendationsBinding.bind(view)
         val slidingPaneLayout = binding.slidingPaneLayout
         slidingPaneLayout.lockMode = SlidingPaneLayout.LOCK_MODE_LOCKED
-        // Connect the SlidingPaneLayout to the system back button.
+
         requireActivity().onBackPressedDispatcher.addCallback(
             viewLifecycleOwner,
             BooksListOnBackPressedCallback(slidingPaneLayout)
         )
 
-        // Initialize the adapter and set it to the RecyclerView.
         val adapter = BooksAdapter {
 
             booksViewModel.updateCurrentBook(it)
@@ -45,10 +45,6 @@ class BooksListFragment : Fragment() {
         adapter.submitList(booksViewModel.booksData as List<Books>?)
     }
 }
-
-/**
- * Callback providing custom back navigation.
- */
 
 class BooksListOnBackPressedCallback(
     private val slidingPaneLayout: SlidingPaneLayout

@@ -5,12 +5,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="200dp"
-    android:layout_height="wrap_content"
+    android:layout_height="350dp"
     android:layout_margin="8dp"
     app:cardElevation="4dp"
     app:strokeWidth="1dp"
     app:cardCornerRadius="10dp"
     app:strokeColor="@android:color/background_light">
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="195dp"
@@ -18,8 +19,11 @@
 
         <ImageView
             android:id="@+id/booksImage"
-            android:layout_width="198dp"
-            android:layout_height="204dp"
+            android:layout_width="150dp"
+            android:layout_height="230dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="25dp"
             android:contentDescription="@null"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

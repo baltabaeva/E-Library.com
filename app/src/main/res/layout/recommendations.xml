@@ -8,6 +8,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.e_library.BooksListFragment">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
@@ -27,7 +28,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.SearchView
-            android:id="@+id/searchView"
+            android:id="@+id/searchViewRecommendations"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:iconifiedByDefault="false"
@@ -47,7 +48,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -60,13 +61,13 @@
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginStart="20dp"
                 android:text="@string/rec"
                 android:textSize="15sp"
                 app:layout_constraintEnd_toEndOf="@id/recycler_view"
                 app:layout_constraintHorizontal_bias="0.071"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/searchView" />
+                app:layout_constraintTop_toBottomOf="@id/searchViewGenres" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_view"
@@ -85,7 +86,8 @@
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
                 android:text="@string/pop"
                 android:textSize="15sp"
                 app:layout_constraintBottom_toTopOf="@id/recycler_view2"

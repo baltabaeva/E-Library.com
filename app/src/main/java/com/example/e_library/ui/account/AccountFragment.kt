@@ -52,11 +52,10 @@ class AccountFragment : Fragment() {
             binding.logInLayout.visibility = View.VISIBLE
             binding.logIn.setTextColor(resources.getColor(R.color.white,null))
         }
-        binding.singIn.setOnClickListener {
-            startActivity(Intent(this@AccountFragment.activity, HomeFragment::class.java))
-        }
+//        binding.singIn.setOnClickListener {
+//            startActivity(Intent(this@AccountFragment, HomeFragment::class.java))
+//        }
     }
-
 
     override fun onDestroyView() {
         super.onDestroyView()
