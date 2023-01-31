@@ -18,6 +18,7 @@ class AnnotationFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         return AnnotationBinding.inflate(inflater, container, false).root
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

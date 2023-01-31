@@ -41,6 +41,15 @@
     <string name="book5">East of Eden</string>
     <string name="book6">Arch of Triumph</string>
     <string name="book7">The Little Lady of Big House</string>
+    <string name="book8">Solaris</string>
+    <string name="book9">The Count of Monte Cristo</string>
+    <string name="book10">The Thorn Birds</string>
+    <string name="book11">Dracula</string>
+    <string name="book12">The Martian</string>
+    <string name="book13">The Return of Sherlock Holmes</string>
+    <string name="book14">The Art Of Being</string>
+
+
 
     <string name="b1_subtitle">Annotation for The Theory of Everything</string>
     <string name="b2_subtitle">Annotation for Nightwork</string>
@@ -57,7 +66,5 @@
     <string name="Horror">Horror</string>
     <string name="Psychology">Psychology</string>
     <string name="Romance">Romance</string>
-
-
 
 </resources>
