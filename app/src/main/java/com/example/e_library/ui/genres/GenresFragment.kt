@@ -1,125 +1,120 @@
 package com.example.e_library.ui.genres
 
-import android.R
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
+import android.widget.SearchView
+import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.e_library.*
+import androidx.fragment.app.activityViewModels
+import androidx.slidingpanelayout.widget.SlidingPaneLayout
+import com.example.e_library.GenresAdapter
+import com.example.e_library.data.GenresData
 import com.example.e_library.databinding.FragmentGenresBinding
+import com.example.e_library.model.Genres
+import kotlinx.android.synthetic.main.recommendations.*
 import java.util.*
+import kotlin.collections.ArrayList
+
 
 
 class GenresFragment : Fragment() {
 
+    private val genresViewModel: GenresViewModel by activityViewModels()
 
-    private var _binding: FragmentGenresBinding? = null
+    //private lateinit var searchList: ArrayList<GenresData>
 
-    private val binding get() = _binding!!
-
-    private lateinit var adapter: GenresAdapter
-    private lateinit var recyclerView: RecyclerView
-//    lateinit var searchView: SearchView
-    private var mList = ArrayList<GenresData>()
-
-    lateinit var logo: Array<Int>
-    lateinit var title: Array<String>
-//    lateinit var genres: Array<String>
-
+//    EditText searchView
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        val galleryViewModel =
-            ViewModelProvider(this).get(GenresViewModel::class.java)
-
-        _binding = FragmentGenresBinding.inflate(layoutInflater, container, false)
-        return inflater.inflate(R.layout.fra, container, false)
-
-
-        return binding.root
-    }
-
-
-
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+    ): View? {
+        return FragmentGenresBinding.inflate(inflater, container, false).root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        dataInitialize()
-        val layoutManager = LinearLayoutManager(context)
-        recyclerView = view.findViewById(R.id.recyclerViewGenres)
-//        searchView = view.findViewById(R.id.searchViewGenres)
-        recyclerView.layoutManager = layoutManager
-        recyclerView.setHasFixedSize(true)
-        adapter = GenresAdapter(mList)
-        recyclerView.adapter = adapter
+        val binding = FragmentGenresBinding.bind(view)
+        val slidingPaneLayout = binding.slidingPaneLayout
+        slidingPaneLayout.lockMode = SlidingPaneLayout.LOCK_MODE_LOCKED
+        requireActivity().onBackPressedDispatcher.addCallback(
+            viewLifecycleOwner,
+            GenresOnBackPressedCallback(slidingPaneLayout)
+        )
+
+        val adapter = GenresAdapter {
+
+            genresViewModel.updateCurrentGenres(it)
+
+            binding.slidingPaneLayout.openPane()
+        }
+        binding.recyclerViewGenres.adapter = adapter
+        adapter.submitList(genresViewModel.genresData)
 
 
-//        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-//            override fun onQueryTextSubmit(query: String?): Boolean {
-//                return false
-//            }
+
+//        val searchView = binding.searchViewGenres
+//        val searchViewList = arrayListOf<GenresData>()
 //
-//            override fun onQueryTextChange(newText: String?): Boolean {
-//                filterList(newText)
+//        searchView.clearFocus()
+//        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+//            override fun onQueryTextSubmit(query: String?): Boolean {
+//                searchView.clearFocus()
 //                return true
 //            }
 //
-//        }) }
-//    private fun filterList(query: String?) {
-//
-//        if (query != null) {
-//            val filteredList = ArrayList<GenresData>()
-//            for (i in mList) {
-//                if (i.title.lowercase(Locale.ROOT).contains(query)) {
-//                    filteredList.add(i)
+//            override fun onQueryTextChange(newText: String?): Boolean {
+//                searchViewList.clear()
+//                val searchText = newText!!.toLowerCase(Locale.getDefault())
+//                if(searchText.isNotEmpty()){
+//                    ArrayList<Genres>().forEach(){
+//                        if (it.titleResourceId.toLowerCase(Locale.getDefault()).contains(searchText)){
+//                            searchList.add(it)
+//                        }
+//                    }
+//                    binding.recyclerViewGenres.adapter!!.notifyDataSetChanged()
+//                }else{
+//                    searchList.clear()
+//                    searchList.addAll(ArrayList<Genres>)
+//                    binding.recyclerViewGenres.adapter!!.notifyDataSetChanged()
 //                }
+//                return false
 //            }
 //
-//            if (filteredList.isEmpty()) {
-//                Toast.makeText(activity, "No Data found", Toast.LENGTH_SHORT).show()
-//            } else {
-//                adapter.setFilteredList(filteredList)
-//            }
-//        }
+//        })
+   }
+}
+
+
+class GenresOnBackPressedCallback(
+    private val slidingPaneLayout: SlidingPaneLayout
+) : OnBackPressedCallback(
+    slidingPaneLayout.isSlideable && slidingPaneLayout.isOpen
+), SlidingPaneLayout.PanelSlideListener {
+
+    init {
+        slidingPaneLayout.addPanelSlideListener(this)
     }
 
-    private fun dataInitialize(){
+    override fun handleOnBackPressed() {
 
-        mList = arrayListOf<GenresData>()
-
-        logo = arrayOf(
-            R.drawable.adventure,
-            R.drawable.children,
-            R.drawable.detective,
-            R.drawable.fantasy,
-            R.drawable.horror,
-            R.drawable.psychology,
-            R.drawable.novel
-        )
-        title = arrayOf(
-            getString(R.string.adventure),
-            getString(R.string.Children),
-            getString(R.string.Detective),
-            getString(R.string.Fantasy),
-            getString(R.string.Horror),
-            getString(R.string.Psychology),
-            getString(R.string.Romance)
-        )
-        for (i in logo.indices){
-            val genres = GenresData(title[i], logo[i])
-            mList.add(genres)
-        }
+        slidingPaneLayout.closePane()
     }
+
+    override fun onPanelSlide(panel: View, slideOffset: Float) {}
+
+    override fun onPanelOpened(panel: View) {
+
+        isEnabled = true
+    }
+
+    override fun onPanelClosed(panel: View) {
+
+        isEnabled = false
+    }
+
+
 }

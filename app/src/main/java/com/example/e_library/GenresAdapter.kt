@@ -1,38 +1,61 @@
 package com.example.e_library
 
-import android.annotation.SuppressLint
+import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
+import com.example.e_library.databinding.GenresBinding
+import com.example.e_library.model.Genres
 
-class GenresAdapter(var mList: ArrayList<GenresData>) :
-    RecyclerView.Adapter<GenresAdapter.GenresViewHolder>() {
 
-    class GenresViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val logo : ImageView = itemView.findViewById(R.id.logoIv)
-        val titleTv : TextView = itemView.findViewById(R.id.titleTv)
+class GenresAdapter(private val onItemClicked: (Genres) -> Unit) :
+    ListAdapter<Genres, GenresAdapter.GenresViewHolder>(DiffCallback) {
+
+    private lateinit var context: Context
+
+    class GenresViewHolder(private var binding: GenresBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+
+        fun bind(genres: Genres, context:Context) {
+            binding.titleTv.text = context.getString(genres.titleResourceId)
+            binding.logoIv.load(genres.imageResourceId)
+        }
     }
 
-    fun setFilteredList(mList: ArrayList<GenresData>){
-        this.mList = mList
-        notifyDataSetChanged()
-    }
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GenresViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.genres , parent , false)
-        return GenresViewHolder(view)
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): GenresViewHolder {
+        context = parent.context
+        return GenresViewHolder(
+            GenresBinding.inflate(
+                LayoutInflater.from(parent.context), parent, false
+            )
+        )
     }
 
     override fun onBindViewHolder(holder: GenresViewHolder, position: Int) {
-        holder.logo.setImageResource(mList[position].logo)
-        holder.titleTv.text = (mList[position].title)
+        val current = getItem(position)
+        holder.itemView.setOnClickListener {
+            onItemClicked(current)
+        }
+        holder.bind(current, context)
     }
 
-    override fun getItemCount(): Int {
-        return mList.size
+    companion object {
+        private val DiffCallback = object : DiffUtil.ItemCallback<Genres>() {
+            override fun areItemsTheSame(oldItem: Genres, newItem: Genres): Boolean {
+                return (oldItem.id == newItem.id ||
+                        oldItem.titleResourceId == newItem.titleBook
+                        )
+            }
+
+            override fun areContentsTheSame(oldItem: Genres, newItem: Genres): Boolean {
+                return oldItem == newItem
+            }
+        }
     }
 }
-

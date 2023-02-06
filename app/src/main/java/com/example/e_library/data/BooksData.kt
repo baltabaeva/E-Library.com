@@ -37,10 +37,10 @@ object BooksData{
             ),
             Books(
                 id = 12,
-                titleResourceId = R.string.book12,
+                titleResourceId = R.string.book15,
                 subTitleResourceId = R.string.b5_subtitle,
-                imageResourceId = R.drawable.img12,
-                booksImageBanner = R.drawable.img12
+                imageResourceId = R.drawable.img15,
+                booksImageBanner = R.drawable.img15
             ),
             Books(
                 id = 13,

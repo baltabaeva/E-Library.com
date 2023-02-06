@@ -49,8 +49,6 @@ class BooksListFragment : Fragment() {
 class BooksListOnBackPressedCallback(
     private val slidingPaneLayout: SlidingPaneLayout
 ) : OnBackPressedCallback(
-    // Set the default 'enabled' state to true only if it is slidable (i.e., the panes
-    // are overlapping) and open (i.e., the detail pane is visible).
     slidingPaneLayout.isSlideable && slidingPaneLayout.isOpen
 ), SlidingPaneLayout.PanelSlideListener {
 

@@ -36,5 +36,26 @@
         android:name="com.example.e_library.ui.account.AccountFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_account" />
+
+    <fragment
+        android:id="@+id/GenresFragment"
+        android:name="com.example.e_library.ui.genres.GenresFragment"
+        android:label="Genres"
+        tools:layout="@layout/fragment_genres">
+
+        <action
+            android:id="@+id/action_GenresFragment_to_GenresDetailsFragment"
+            app:destination="@id/GenresDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/GenresDetailsFragment"
+        android:name="com.example.e_library.GenresDetailsFragment"
+        android:label="@string/news_fragment_label"
+        tools:layout="@layout/fragment_genres_details">
+
+        <action
+            android:id="@+id/action_NewsFragment_to_SportsListFragment"
+            app:destination="@id/GenresFragment" />
+    </fragment>
 </navigation>
 
