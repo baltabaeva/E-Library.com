@@ -8,5 +8,6 @@ data class Books(
     val subTitleResourceId: Int,
     val imageResourceId: Int,
     val booksImageBanner: Int,
-    val annotationDetails: Int = R.string.annotation_text
+    val annotationDetails: Int,
+    val authorDetails: Int
 )

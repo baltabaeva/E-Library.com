@@ -1,8 +1,12 @@
 package com.example.e_library
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.view.Menu
+import android.view.View
+import android.widget.ImageView
 import androidx.annotation.RequiresApi
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -23,6 +27,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fragment_genres)
@@ -45,9 +50,27 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+        val iv_click_me = findViewById(R.id.mybtn) as ImageView
+        // set on-click listener
+        iv_click_me.setOnClickListener {
+            // your code to perform when the user clicks on the ImageView
+            startActivity(Intent(this@MainActivity, MainActivity::class.java))
+        }
+        val beforesave = findViewById(R.id.save) as ImageView
+        var iv: ImageView? = null
+        var flag = false
+        var images = intArrayOf(R.drawable.mysave_1, R.drawable.mysave_2)
+        var i = 0
 
-
+        iv = findViewById<View>(R.id.save) as ImageView
+        flag = true
+        beforesave.setOnClickListener {
+            iv.setImageResource(images[i])
+            i++
+            if (i == 2) i = 0
+        }
     }
+
 
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -61,4 +84,3 @@ class MainActivity : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 }
-

@@ -1,3 +1,4 @@
+
 <resources>
     <string name="app_name">E-Library</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -32,7 +33,14 @@
     <string name="annotation_text">An annotation is extra information associated with a particular point in a document or other piece of information. It can be a note that includes a comment or explanation.[1] Annotations are sometimes presented in the margin of book pages. For annotations of different digital media, see web annotation and text annotation.
 
 </string>
-    />
+    <string name="text1">Solaris is one of the few science fiction novels to be included on the 1001 Books Everyone Must Read Before You Die list. Written in Polish in 1961, for decades the only English edition has been one that was translated from Polish to French then from French to English. </string>
+    <string name="text2">Dantes is imprisoned on the island prison of Chateau dIf for 13 years, where he plots revenge against those who betrayed him. With help from another prisoner, he escapes the island and proceeds to transform himself into the wealthy Count of Monte Cristo as part of his plan to exact revenge.</string>
+    <string name="text3">The Thorn Birds traces the lives of the members of the Cleary family over the course of three generations, from their poor existence in New Zealand to their eventual move to Australia when a distant relative summons them and promises them a more stable life.</string>
+    <string name="text4">Dracula, Gothic novel by Bram Stoker, published in 1897, that was the most popular literary work derived from vampire legends and became the basis for an entire genre of literature and film. Dracula comprises journal entries, letters, and telegrams written by the main characters.</string>
+    <string name="text5">"The Martian" is the debut novel by American writer Andy Weier in the genre of fiction. The novel centers on astronaut Mark Whatley, who was left alone on Mars due to the circumstances. He has to show imagination and apply all his knowledge to survive and try to return to Earth.</string>
+    <string name="text6">The Return of Sherlock Holmes is a collection of 13 detective stories by Arthur Conan Doyle, published in 1905 and consisting of stories written in 1903-1904. Forced "resurrection" of Holmes: in 1891, the main character "died" in the Reichenbach Falls.</string>
+    <string name="text7">Erich Fromm is the greatest thinker of the XX century, one of the great cohort of "philosophers from psychology" and the spiritual leader of the Frankfurt School of Sociology. The works of E. Fromm are always relevant, because the main theme of his research was the disclosure.</string>
+    <string name="text8">"The Little Prince" is an allegorical tale—tale, the most famous work of Antoine de Saint-Exupery. The fairy tale tells about a Little Prince who visits various planets in space, including Earth. The book addresses the themes of loneliness, friendship, love and loss.</string>
 
     <string name="book1">The Theory of Everything</string>
     <string name="book2">Nightwork</string>
@@ -51,6 +59,14 @@
     <string name="book14">The Art Of Being</string>
     <string name="book15">The Little Prince</string>
 
+    <string name="author8">Stanislav Lem</string>
+    <string name="author9">Alexander Dumas</string>
+    <string name="author10">Colleen McCullough</string>
+    <string name="author11">Bram Stoker</string>
+    <string name="author12">Andy Weir</string>
+    <string name="author13">Arthur Conan Doyle</string>
+    <string name="author14">Erich Fromm</string>
+    <string name="author15">Solaris</string>
 
     <string name="b1_subtitle">Annotation for The Theory of Everything</string>
     <string name="b2_subtitle">Annotation for Nightwork</string>

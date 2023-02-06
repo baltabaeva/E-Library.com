@@ -5,7 +5,6 @@ import com.example.e_library.data.BooksData
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.e_library.data.BooksData2
 import com.example.e_library.model.Books
 
 class LibraryViewModel : ViewModel() {

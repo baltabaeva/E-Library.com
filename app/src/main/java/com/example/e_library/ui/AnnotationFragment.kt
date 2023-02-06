@@ -29,6 +29,7 @@ class AnnotationFragment : Fragment() {
             binding.titleDetail.text = getString(it.titleResourceId)
             binding.booksImageDetail.load(it.booksImageBanner)
             binding.newsDetail.text = getString(it.annotationDetails)
+            binding.authorDetails.text = getString(it.authorDetails)
         }
     }
 }
