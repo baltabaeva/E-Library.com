@@ -16,6 +16,7 @@
             android:layout_gravity="start"
             android:clipToPadding="false"
             android:padding="8dp"
+            android:layoutAnimation="@anim/layout_down"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
 

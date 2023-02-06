@@ -10,8 +10,8 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Genres</string>
     <string name="menu_slideshow">My Account</string>
-    <string name="rec">Recommendations for you</string>
-    <string name="pop">Popular books</string>
+    <string name="rec">Recommendations for you ></string>
+    <string name="pop">Popular books ></string>
     <string name="str1">name</string>
     <string name="str2">name</string>
     <string name="str3">name</string>
@@ -67,7 +67,13 @@
     <string name="Horror">Horror</string>
     <string name="Psychology">Psychology</string>
     <string name="Romance">Romance</string>
+
+
+    <string name="Welcome">Welcome</string>
+    <string name="to">to E-Library</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
+
 
 </resources>

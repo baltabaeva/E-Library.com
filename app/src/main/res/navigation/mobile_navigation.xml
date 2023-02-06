@@ -57,5 +57,6 @@
             android:id="@+id/action_NewsFragment_to_SportsListFragment"
             app:destination="@id/GenresFragment" />
     </fragment>
+
 </navigation>
 

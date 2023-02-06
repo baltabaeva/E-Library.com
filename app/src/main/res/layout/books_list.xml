@@ -15,18 +15,17 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="195dp"
-        android:layout_height="310dp">
+        android:layout_height="350dp">
 
         <ImageView
             android:id="@+id/booksImage"
             android:layout_width="150dp"
             android:layout_height="230dp"
-            android:layout_marginLeft="25dp"
             android:layout_marginTop="15dp"
-            android:layout_marginRight="25dp"
             android:contentDescription="@null"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/img1"
@@ -40,10 +39,12 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="12dp"
             android:layout_marginEnd="10dp"
+            android:layout_marginBottom="55dp"
             android:padding="8dp"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
@@ -55,39 +56,43 @@
             style="@style/BooksDetailText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
+            android:layout_marginTop="320dp"
+            android:layout_marginEnd="75dp"
+            android:layout_marginBottom="15dp"
             android:padding="8dp"
             android:text="@string/ant"
             android:textColor="?android:textColorSecondary"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/booksImage"
-            app:layout_constraintVertical_bias="0.89" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="23dp"
             android:layout_height="35dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="300dp"
             android:gravity="center_horizontal"
-            app:layout_constraintBottom_toBottomOf="@+id/newsTitle"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.912"
-            app:layout_constraintStart_toEndOf="@+id/newsTitle"
-            app:layout_constraintTop_toTopOf="@+id/newsTitle"
-            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/star_icon" />
 
         <TextView
+            android:id="@+id/textView4"
             android:layout_width="31dp"
             android:layout_height="27dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="85dp"
+            android:layout_marginTop="310dp"
             android:text="4.8"
             android:textSize="16sp"
-            app:layout_constraintEnd_toStartOf="@+id/imageView"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/newsTitle"
-            app:layout_constraintTop_toTopOf="@+id/newsTitle" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
