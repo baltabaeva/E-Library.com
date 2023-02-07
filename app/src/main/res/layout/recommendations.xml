@@ -8,6 +8,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.e_library.BooksListFragment">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
@@ -63,6 +64,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="20dp"
                 android:text="@string/rec"
+                android:textColor="@color/dark_grey"
                 android:textSize="15sp"
                 app:layout_constraintEnd_toEndOf="@id/recycler_view"
                 app:layout_constraintHorizontal_bias="0.071"
@@ -91,6 +93,7 @@
                 android:layout_marginTop="20dp"
                 android:text="@string/pop"
                 android:textSize="15sp"
+                android:textColor="@color/dark_grey"
                 app:layout_constraintBottom_toTopOf="@id/recycler_view2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.053"

@@ -1,12 +1,21 @@
 package com.example.e_library.ui.account
 
+import android.app.Notification
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.content.Context
+import android.content.Context.*
 import android.content.Intent
 import android.os.Build
+import android.os.Build.VERSION_CODES
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.annotation.RequiresApi
+import androidx.core.app.NotificationCompat
+import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -32,8 +41,9 @@ class AccountFragment : Fragment() {
         _binding = FragmentAccountBinding.inflate(layoutInflater, container, false)
 
         return binding.root
+
     }
-    @RequiresApi(Build.VERSION_CODES.M)
+    @RequiresApi(VERSION_CODES.M)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.singUp.setOnClickListener {
@@ -56,6 +66,7 @@ class AccountFragment : Fragment() {
 //            startActivity(Intent(this@AccountFragment, HomeFragment::class.java))
 //        }
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()
