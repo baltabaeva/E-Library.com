@@ -43,23 +43,24 @@
             android:background="@drawable/switch_tumbs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <TextView
                 android:id="@+id/logIn"
-                android:text="@string/log_in"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/switch_trcks"
+                android:gravity="center"
+                android:paddingLeft="15dp"
                 android:paddingTop="5dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="5dp"
+                android:text="@string/log_in"
                 android:textAlignment="center"
                 android:textColor="@color/dark_grey"
                 android:textSize="16sp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:paddingBottom="5dp"
-                android:paddingRight="15dp"
-                android:paddingLeft="15dp"
-                android:textStyle="bold|normal"
-                android:background="@drawable/switch_trcks"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"/>
+                android:textStyle="bold|normal" />
             <TextView
                 android:id="@+id/singUp"
                 android:text="@string/sign_up"

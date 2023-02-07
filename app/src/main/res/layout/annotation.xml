@@ -7,13 +7,13 @@
     tools:context=".MainActivity"
     android:layout_width="match_parent"
     android:layout_height="700dp"
-    android:layout_margin="16dp"
+    android:layout_margin="10dp"
     app:cardCornerRadius="8dp"
-    android:layout_marginTop="50dp">
+    android:layout_marginTop="20dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="700dp">
 
         <ImageView
             android:id="@+id/booksImageDetail"
@@ -75,7 +75,7 @@
             android:id="@+id/toolbar2"
             android:layout_width="377dp"
             android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary"
+            android:background="@color/white"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme"
             app:layout_constraintEnd_toEndOf="parent"
@@ -86,7 +86,7 @@
                 android:id="@+id/mybtn"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:background="@drawable/back2"
+                android:background="@drawable/back3_foreground"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -97,7 +97,7 @@
                 android:layout_height="50dp"
                 android:layout_marginLeft="270dp"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/mysave_1"
+                android:background="@drawable/save3_"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.appcompat.widget.Toolbar>
@@ -115,7 +115,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.945"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/newsDetail" />
+            app:layout_constraintTop_toBottomOf="@+id/newsDetail"
+            app:layout_constraintVertical_bias="0.0" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

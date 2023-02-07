@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
         val beforesave = findViewById(R.id.save) as ImageView
         var iv: ImageView? = null
         var flag = false
-        var images = intArrayOf(R.drawable.mysave_1, R.drawable.mysave_2)
+        var images = intArrayOf(R.drawable.save3_, R.drawable.save4_foreground)
         var i = 0
 
         iv = findViewById<View>(R.id.save) as ImageView
@@ -69,6 +69,7 @@ class MainActivity : AppCompatActivity() {
             i++
             if (i == 2) i = 0
         }
+
     }
 
 

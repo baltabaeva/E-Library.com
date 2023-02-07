@@ -32,6 +32,7 @@ class AccountFragment : Fragment() {
         _binding = FragmentAccountBinding.inflate(layoutInflater, container, false)
 
         return binding.root
+
     }
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
