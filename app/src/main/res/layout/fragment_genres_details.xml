@@ -5,29 +5,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity"
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent"
-    android:layout_margin="16dp"
-    app:cardCornerRadius="8dp">
+    android:layout_width="match_parent"
+    android:layout_height="700dp"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="8dp"
+    android:layout_marginTop="20dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
-        android:layout_height="750dp">
+        android:layout_width="match_parent"
+        android:layout_height="700dp">
 
         <ImageView
             android:id="@+id/booksImageDetail"
             android:layout_width="146dp"
             android:layout_height="232dp"
-            android:layout_marginTop="70dp"
-            android:layout_marginBottom="100dp"
+            android:layout_marginTop="12dp"
             android:adjustViewBounds="true"
             android:contentDescription="@null"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.523"
+            app:layout_constraintHorizontal_bias="0.51"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar2"
             tools:srcCompat="@drawable/img1" />
 
         <TextView
@@ -35,18 +33,16 @@
             style="@style/BooksTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="370dp"
+            android:layout_marginTop="300dp"
             android:fontFamily="serif"
-            android:padding="15dp"
+            android:padding="16dp"
             android:textColor="@color/black"
             android:textStyle="bold"
             android:theme="@style/ThemeOverlay.AppCompat.Dark"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.006"
+            app:layout_constraintHorizontal_bias="0.003"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/booksImageDetail"
-            app:layout_constraintVertical_bias="0.793"
+            app:layout_constraintTop_toTopOf="parent"
             tools:text="@string/annotation_title" />
 
         <TextView
@@ -56,76 +52,72 @@
             android:layout_height="wrap_content"
             android:padding="8dp"
             android:text="@string/ant"
-            android:textColor="@color/dark_grey"
-            app:layout_constraintBottom_toTopOf="@+id/newsDetail"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/titleDetail"
             app:layout_constraintTop_toBottomOf="@+id/titleDetail"
-            app:layout_constraintVertical_bias="0.212" />
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/newsDetail"
             style="@style/BooksBody"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="200dp"
             android:padding="8dp"
             android:text="@string/annotation_text"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/booksImageDetail"
-            app:layout_constraintVertical_bias="0.548"
+            app:layout_constraintTop_toBottomOf="@+id/authorDetails"
+            tools:layout_editor_absoluteX="-1dp"
             tools:ignore="MissingConstraints" />
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar2"
-            android:layout_width="wrap_content"
+            android:layout_width="377dp"
             android:layout_height="wrap_content"
-            android:background="@color/grey"
+            android:background="@color/white"
+            android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
-                android:id="@+id/mybtn"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:background="@drawable/back2"
+                android:id="@+id/mybtn2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/back3_foreground"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+
             <ImageView
-                android:id="@+id/save"
+                android:id="@+id/save2"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="270dp"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/mysave_1"
+                android:background="@drawable/save3_"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.appcompat.widget.Toolbar>
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="90dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
             android:fontFamily="serif"
-            android:text="Read"
+            android:text="READ"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textSize="15dp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.945"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/newsDetail"
-            app:layout_constraintVertical_bias="0.7" />
+            app:layout_constraintVertical_bias="0.0" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
