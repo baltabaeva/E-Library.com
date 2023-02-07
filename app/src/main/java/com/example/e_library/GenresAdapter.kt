@@ -1,10 +1,13 @@
 package com.example.e_library
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
+import android.widget.ImageView
 import androidx.cardview.widget.CardView
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -28,6 +31,7 @@ class GenresAdapter(private val onItemClicked: (Genres) -> Unit) :
             binding.logoIv.load(genres.imageResourceId)
         }
         val cardView: CardView = itemView.findViewById(R.id.cardViewItem)
+
     }
 
     override fun onCreateViewHolder(
