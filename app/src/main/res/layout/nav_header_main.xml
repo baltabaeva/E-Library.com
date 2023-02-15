@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
-    android:background="@drawable/librarypic5"
+    android:layout_height="180dp"
+    android:background="@drawable/app4"
     android:gravity="bottom"
     android:orientation="vertical"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -12,28 +12,18 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
-<!--    <ImageView-->
-<!--        android:id="@+id/imageView"-->
-<!--        android:layout_width="85dp"-->
-<!--        android:layout_height="79dp"-->
-<!--        android:contentDescription="@string/nav_header_desc"-->
+
+
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:fontFamily="serif"-->
 <!--        android:paddingTop="@dimen/nav_header_vertical_spacing"-->
-<!--        app:srcCompat="@drawable/ic_launcher_foreground" />-->
+<!--        android:text="E-Library"-->
+<!--        android:textAppearance="@style/TextAppearance.AppCompat.Body1"-->
+<!--        android:textColor="#F3E0E0"-->
+<!--        android:textSize="24sp"-->
+<!--        android:textStyle="bold" />-->
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="serif"
-        android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="E-Library"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="#F3E0E0"
-        android:textSize="24sp"
-        android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/nav_header_subtitle" />
 </LinearLayout>
