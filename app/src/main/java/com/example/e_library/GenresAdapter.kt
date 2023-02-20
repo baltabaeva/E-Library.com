@@ -14,7 +14,8 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.e_library.databinding.GenresBinding
 import com.example.e_library.model.Genres
-import kotlinx.android.synthetic.main.genres.view.*
+
+//import kotlinx.android.synthetic.main.genres.view.*
 
 
 class GenresAdapter(private val onItemClicked: (Genres) -> Unit) :

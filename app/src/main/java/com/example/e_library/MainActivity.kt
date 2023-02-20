@@ -2,12 +2,10 @@ package com.example.e_library
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import android.os.Build
 import android.os.Bundle
 import android.view.Menu
 import android.view.View
 import android.widget.ImageView
-import androidx.annotation.RequiresApi
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -16,10 +14,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.e_library.databinding.ActivityMainBinding
-import java.util.ArrayList
 
 
 class MainActivity : AppCompatActivity() {
@@ -50,22 +45,21 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
-        val iv_click_me = findViewById(R.id.mybtn) as ImageView
-        // set on-click listener
-        iv_click_me.setOnClickListener {
-            // your code to perform when the user clicks on the ImageView
+        val clickMe = findViewById<ImageView>(R.id.mybtn)
+
+        clickMe.setOnClickListener {
             startActivity(Intent(this@MainActivity, MainActivity::class.java))
         }
         val beforesave = findViewById(R.id.save) as ImageView
-        var iv: ImageView? = null
+        var saveButton: ImageView? = null
         var flag = false
         var images = intArrayOf(R.drawable.save3_, R.drawable.save4_foreground)
         var i = 0
 
-        iv = findViewById<View>(R.id.save) as ImageView
+        saveButton = findViewById<View>(R.id.save) as ImageView
         flag = true
         beforesave.setOnClickListener {
-            iv.setImageResource(images[i])
+            saveButton.setImageResource(images[i])
             i++
             if (i == 2) i = 0
         }

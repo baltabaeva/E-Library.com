@@ -16,10 +16,10 @@ import com.example.e_library.GenresAdapter
 import com.example.e_library.data.GenresData
 import com.example.e_library.databinding.FragmentGenresBinding
 import com.example.e_library.model.Genres
-import kotlinx.android.synthetic.main.recommendations.*
+
 import java.util.*
 import kotlin.collections.ArrayList
-
+import kotlinx.parcelize.Parcelize
 
 
 class GenresFragment : Fragment() {
