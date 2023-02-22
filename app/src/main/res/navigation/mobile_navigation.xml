@@ -30,6 +30,11 @@
         android:name="com.example.e_library.ui.genres.GenresFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_genres" />
+    <fragment
+        android:id="@+id/LoginPage"
+        android:name="com.example.e_library.ui.account.AccountFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/activity_login_screen" />
 
 
     <fragment

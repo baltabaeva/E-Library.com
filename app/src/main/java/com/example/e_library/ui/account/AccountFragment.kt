@@ -20,12 +20,13 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.e_library.R
-import com.example.e_library.databinding.FragmentAccountBinding
+import com.example.e_library.databinding.ActivityLoginScreenBinding
 import com.example.e_library.ui.home.HomeFragment
+
 
 class AccountFragment : Fragment() {
 
-    private var _binding: FragmentAccountBinding? = null
+    private var _binding: ActivityLoginScreenBinding? = null
 
     private val binding get() = _binding!!
 
@@ -38,7 +39,7 @@ class AccountFragment : Fragment() {
         val accountViewModel =
             ViewModelProvider(this).get(AccountViewModel::class.java)
 
-        _binding = FragmentAccountBinding.inflate(layoutInflater, container, false)
+        _binding = ActivityLoginScreenBinding.inflate(layoutInflater, container, false)
 
         return binding.root
 

@@ -27,23 +27,11 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.appcompat.widget.SearchView
-            android:id="@+id/searchView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:iconifiedByDefault="false"
-            app:queryBackground="@android:color/transparent"
-            app:queryHint="Search ...">
 
 
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="?attr/colorPrimary"
-                android:minHeight="?attr/actionBarSize"
-                android:theme="?attr/actionBarTheme" />
-        </androidx.appcompat.widget.SearchView>
+
+
+
         </com.google.android.material.card.MaterialCardView>
 
         <LinearLayout
@@ -70,7 +58,7 @@
                 app:layout_constraintEnd_toEndOf="@id/recycler_view"
                 app:layout_constraintHorizontal_bias="0.071"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/searchView" />
+                app:layout_constraintTop_toBottomOf="@id/switch3" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_view"
@@ -114,22 +102,22 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView3" />
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                tools:context=".MainActivity">
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                tools:context=".MainActivity">-->
 
-                <!--Create a switch-->
-                <Switch
-                    android:id="@+id/switch1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="dark mode"
-                    android:textColor="@color/black"
-                    tools:ignore="UseSwitchCompatOrMaterialXml,TouchTargetSizeCheck" />
+<!--                &lt;!&ndash;Create a switch&ndash;&gt;-->
+<!--                <Switch-->
+<!--                    android:id="@+id/switch1"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_centerInParent="true"-->
+<!--                    android:text="dark mode"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    tools:ignore="UseSwitchCompatOrMaterialXml,TouchTargetSizeCheck" />-->
 
-            </RelativeLayout>
+<!--            </RelativeLayout>-->
         </LinearLayout>
 
 
