@@ -16,27 +16,6 @@
             android:icon="@drawable/ic_menu_house_foreground"
             android:title="Genres"/>
 
-<!--            <menu>-->
-<!--                <item-->
-<!--                    android:id="@+id/fantasy"-->
-<!--                    android:title="Fantasy" />-->
-<!--                <item-->
-<!--                    android:id="@+id/adventure"-->
-<!--                    android:title="Adventure" />-->
-<!--                <item-->
-<!--                    android:id="@+id/romance"-->
-<!--                    android:title="Romance" />-->
-<!--                <item-->
-<!--                    android:id="@+id/horror"-->
-<!--                    android:title="Horror" />-->
-<!--                <item-->
-<!--                    android:id="@+id/scienceFiction"-->
-<!--                    android:title="Science Fiction" />-->
-<!--                <item-->
-<!--                    android:id="@+id/childrens"-->
-<!--                    android:title="Childrens" />-->
-
-<!--            </menu>-->
 
         <item
             android:id="@+id/AccountPage"
