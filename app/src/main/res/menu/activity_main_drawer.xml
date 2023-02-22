@@ -39,7 +39,7 @@
 <!--            </menu>-->
 
         <item
-            android:id="@+id/nav_account"
+            android:id="@+id/AccountPage"
             android:icon="@drawable/ic_menu_accounts"
             android:title="My account" />
 

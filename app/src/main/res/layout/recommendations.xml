@@ -35,6 +35,7 @@
             app:queryBackground="@android:color/transparent"
             app:queryHint="Search ...">
 
+
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
@@ -113,7 +114,25 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView3" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity">
+
+                <!--Create a switch-->
+                <Switch
+                    android:id="@+id/switch1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="dark mode"
+                    android:textColor="@color/black"
+                    tools:ignore="UseSwitchCompatOrMaterialXml,TouchTargetSizeCheck" />
+
+            </RelativeLayout>
         </LinearLayout>
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.fragment.app.FragmentContainerView
@@ -124,5 +143,6 @@
         android:name="com.example.e_library.AnnotationFragment"
         tools:layout="@android:layout/test_list_item"
         android:orientation="vertical"/>
+
 
 </androidx.slidingpanelayout.widget.SlidingPaneLayout>
