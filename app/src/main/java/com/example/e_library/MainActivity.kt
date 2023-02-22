@@ -5,7 +5,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.View
+import android.widget.Button
 import android.widget.ImageView
+import androidx.annotation.WorkerThread
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -15,17 +17,26 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.example.e_library.databinding.ActivityMainBinding
-
+import com.google.android.material.textfield.TextInputEditText
+import org.json.JSONObject
+import java.io.OutputStreamWriter
+import java.net.HttpURLConnection
+import java.net.URL
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
+    private lateinit var button: Button
+    private lateinit var eMail: String
+    private lateinit var password: String
+    private var ENDPOINT = "http://5.135.99.26:4000"
+
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_genres)
+        setContentView(R.layout.fragment_account)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -36,7 +47,21 @@ class MainActivity : AppCompatActivity() {
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_content_main)
+        val button = findViewById<Button>(R.id.singIn)
+        val eMail = findViewById<TextInputEditText>(R.id.eMail)
+        val password = findViewById<TextInputEditText>(R.id.passwords)
 
+
+        button.setOnClickListener {
+            val eMail = eMail.text
+            val password = password.text
+            Thread {
+                addEmail(eMail.toString())
+            }.start()
+            Thread {
+                addPassword(password.toString())
+            }.start()
+        }
 
         appBarConfiguration = AppBarConfiguration(
             setOf(
@@ -65,8 +90,44 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+    @WorkerThread
+    private fun addEmail(eMail: String) {
+        val httpUrlConnection = URL(ENDPOINT).openConnection() as HttpURLConnection
+        val body = JSONObject().apply {
 
+        }
+        httpUrlConnection.apply {
+            connectTimeout = 10000 // 10 seconds
+            requestMethod = "POST"
+            doOutput = true
+            setRequestProperty("Content-Type", "application/json")
+        }
+        OutputStreamWriter(httpUrlConnection.outputStream).use {
+            it.write(body.toString())
+        }
+        httpUrlConnection.responseCode
+        httpUrlConnection.disconnect()
 
+    }
+    @WorkerThread
+    private fun addPassword(password: String) {
+        val httpUrlConnection = URL(ENDPOINT).openConnection() as HttpURLConnection
+        val body = JSONObject().apply {
+
+        }
+        httpUrlConnection.apply {
+            connectTimeout = 10000 // 10 seconds
+            requestMethod = "POST"
+            doOutput = true
+            setRequestProperty("Content-Type", "application/json")
+        }
+        OutputStreamWriter(httpUrlConnection.outputStream).use {
+            it.write(body.toString())
+        }
+        httpUrlConnection.responseCode
+        httpUrlConnection.disconnect()
+
+    }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
