@@ -6,10 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/Theme.MyApplication.AppBarOverlay">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -29,18 +25,17 @@
                 android:layout_marginTop="20dp">
 
                 <!--Create a switch-->
-                <Switch
-                    android:id="@+id/switch3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Dark"
-                    android:textColor="@color/white"
+<!--                <Switch-->
+<!--                    android:id="@+id/switch3"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Dark"-->
+<!--                    android:textColor="@color/white"-->
 
-                    tools:ignore="UseSwitchCompatOrMaterialXml,TouchTargetSizeCheck" />
+<!--                    tools:ignore="UseSwitchCompatOrMaterialXml,TouchTargetSizeCheck" />-->
 
             </RelativeLayout>
 
-    </com.google.android.material.appbar.AppBarLayout>
 
     <include layout="@layout/content_main" />
 
