@@ -34,4 +34,21 @@
     <style name="BooksTitle" parent="TextAppearance.MaterialComponents.Headline5">
         <item name="android:textColor">@color/white</item>
     </style>
+    <style name="general_app_theme" parent="@style/Theme.AppCompat">
+        <!-- for API level 11 -->
+        <item name="android:actionBarStyle">@style/action_bar_style</item>
+
+        <!-- Support library compatibility -->
+        <item name="actionBarStyle">@style/action_bar_style</item>
+
+    </style>
+
+    <style name="action_bar_style" parent="@style/Widget.AppCompat.ActionBar">
+        <!-- for API level 11 -->
+        <item name="android:background">@color/blue</item>
+        <item name="android:displayOptions">showTitle</item>
+
+        <!-- Support library compatibility -->
+        <item name="displayOptions">showTitle</item>
+    </style>
 </resources>

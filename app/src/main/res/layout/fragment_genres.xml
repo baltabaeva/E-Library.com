@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-    <androidx.slidingpanelayout.widget.SlidingPaneLayout
+<androidx.slidingpanelayout.widget.SlidingPaneLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -18,7 +18,6 @@
             android:padding="8dp"
             android:layoutAnimation="@anim/layout_down"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
-
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/detail_container"

@@ -1,4 +1,4 @@
-package com.example.e_library
+package com.example.e_library.ui
 
 import android.content.Context
 import android.view.LayoutInflater

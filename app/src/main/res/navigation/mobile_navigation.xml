@@ -6,7 +6,7 @@
     app:startDestination="@+id/Recommendation">
     <fragment
         android:id="@+id/Recommendation"
-        android:name="com.example.e_library.BooksListFragment"
+        android:name="com.example.e_library.ui.BooksListFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/recommendations">
 
@@ -30,18 +30,13 @@
         android:name="com.example.e_library.ui.genres.GenresFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_genres" />
-    <fragment
-        android:id="@+id/LoginPage"
-        android:name="com.example.e_library.ui.account.AccountFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/activity_login_screen" />
 
 
     <fragment
         android:id="@+id/AccountPage"
         android:name="com.example.e_library.ui.home.HomeFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_home"  >
+        tools:layout="@layout/fragment_home">
 
     </fragment>
 
@@ -64,6 +59,18 @@
         <action
             android:id="@+id/action_NewsFragment_to_SportsListFragment"
             app:destination="@id/GenresFragment" />
+        <action
+            android:id="@+id/action_GenresDetailsFragment_self"
+            app:destination="@id/GenresDetailsFragment" />
     </fragment>
+    <activity
+        android:id="@+id/splashScreen"
+        android:name="com.example.e_library.SplashScreen"
+        android:label="SplashScreen"
+        tools:layout="@layout/activity_splash_screen">
+
+    </activity>
+
+
 
 </navigation>

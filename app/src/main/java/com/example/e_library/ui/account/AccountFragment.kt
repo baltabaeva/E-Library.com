@@ -20,8 +20,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.e_library.databinding.ActivitySignInScreenBinding
 
-
-
 class AccountFragment : Fragment() {
 
     private var _binding: ActivitySignInScreenBinding? = null
@@ -42,29 +40,6 @@ class AccountFragment : Fragment() {
         return binding.root
 
     }
-//    @RequiresApi(VERSION_CODES.M)
-//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-//        super.onViewCreated(view, savedInstanceState)
-//        binding.singUp.setOnClickListener {
-//            binding.singUp.background = resources.getDrawable(R.drawable.switch_trcks, null)
-//            binding.singUp.setTextColor(resources.getColor(R.color.white,null))
-//            binding.logIn.background = null
-//            binding.singUpLayout.visibility = View.VISIBLE
-//            binding.logInLayout.visibility = View.GONE
-//            binding.logIn.setTextColor(resources.getColor( R.color.purple_200,null))
-//        }
-//        binding.logIn.setOnClickListener {
-//            binding.singUp.background = null
-//            binding.singUp.setTextColor(resources.getColor( R.color.purple_200,null))
-//            binding.logIn.background = resources.getDrawable(R.drawable.switch_trcks,null)
-//            binding.singUpLayout.visibility = View.GONE
-//            binding.logInLayout.visibility = View.VISIBLE
-//            binding.logIn.setTextColor(resources.getColor(R.color.white,null))
-//        }
-////        binding.singIn.setOnClickListener {
-////            startActivity(Intent(this@AccountFragment, HomeFragment::class.java))
-////        }
-//    }
 
     override fun onDestroyView() {
         super.onDestroyView()

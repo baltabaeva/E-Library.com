@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import coil.load
 import com.example.e_library.databinding.AnnotationBinding
+import com.example.e_library.ui.LibraryViewModel
 
 class AnnotationFragment : Fragment() {
 
