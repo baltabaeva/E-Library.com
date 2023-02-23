@@ -51,10 +51,10 @@
                 <Button
                     android:layout_width="350dp"
                     android:layout_height="70dp"
-                    android:text="Sign In"
+                    android:layout_marginTop="30dp"
+                    android:text="Login"
                     android:id="@+id/login_button"
                     android:textSize="18sp"
-                    android:layout_marginTop="30dp"
                     app:cornerRadius = "30dp"/>
 
                 <TextView

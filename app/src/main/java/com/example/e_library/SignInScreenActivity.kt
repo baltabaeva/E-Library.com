@@ -1,8 +1,10 @@
 package com.example.e_library
 
 import android.content.Intent
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -14,34 +16,17 @@ class SignInScreenActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySignInScreenBinding
     private lateinit var firebaseAuth: FirebaseAuth
-    private lateinit var button: Button
-    private lateinit var email: String
-    private lateinit var password: String
-    private lateinit var signupRedirectText: String
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySignInScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val button = findViewById<Button>(R.id.login_button)
-        val email = findViewById<EditText>(R.id.login_email)
-        val password = findViewById<EditText>(R.id.login_password)
-        val signupRedirectText = findViewById<TextView>(R.id.signupRedirectText)
-
         firebaseAuth = FirebaseAuth.getInstance()
-        signupRedirectText.setOnClickListener {
-            val intent = Intent(this, SignUpScreenActivity::class.java)
-            startActivity(intent)
-        }
-
-        button.setOnClickListener {
-            val email = email.text.toString()
-            val pass = password.text.toString()
-
-            if (email.isNotEmpty() && pass.isNotEmpty()) {
-
-                firebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener {
-                    if (it.isSuccessful) {
+        binding.loginButton.setOnClickListener {
+            val email = binding.loginEmail.text.toString()
+            val password = binding.loginPassword.text.toString()
+            if (email.isNotEmpty() && password.isNotEmpty()){
+                firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener{
+                    if (it.isSuccessful){
                         val intent = Intent(this, MainActivity::class.java)
                         startActivity(intent)
                     } else {
@@ -49,17 +34,27 @@ class SignInScreenActivity : AppCompatActivity() {
                     }
                 }
             } else {
-                Toast.makeText(this, "Empty Fields Are not Allowed !!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Fields cannot be empty", Toast.LENGTH_SHORT).show()
             }
         }
-    }
-
-    override fun onStart() {
-        super.onStart()
-
-        if(firebaseAuth.currentUser != null){
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+        binding.signupRedirectText.setOnClickListener {
+            val signupIntent = Intent(this, SignUpScreenActivity::class.java)
+            startActivity(signupIntent)
         }
+    }
+    //Outside onCreate
+    private fun compareEmail(email: EditText){
+        if (email.text.toString().isEmpty()){
+            return
+        }
+        if (!Patterns.EMAIL_ADDRESS.matcher(email.text.toString()).matches()){
+            return
+        }
+        firebaseAuth.sendPasswordResetEmail(email.text.toString())
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    Toast.makeText(this, "Check your email", Toast.LENGTH_SHORT).show()
+                }
+            }
     }
 }
